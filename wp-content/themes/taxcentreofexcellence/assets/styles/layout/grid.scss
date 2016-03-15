@@ -8,4 +8,8 @@
   .column-two-thirds {
     @include grid-column(2/3);
   }
+
+  .column-one-half {
+    @include grid-column(1/2);
+  }
 }
