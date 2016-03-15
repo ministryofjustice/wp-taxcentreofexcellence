@@ -58,10 +58,9 @@ html {
 body {
   background: $white;
   color: $text-colour;
-  line-height: 1.5;
-  font-weight: 400;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  @include core-16;
 }
 
 ol, ul, nav ol, nav ul {

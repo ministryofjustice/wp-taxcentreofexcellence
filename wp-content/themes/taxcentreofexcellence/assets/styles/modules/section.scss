@@ -1,0 +1,9 @@
+.section {
+  .section__heading {
+    border-bottom: 2px solid $grey-1;
+    margin: 20px 0;
+  }
+  .section__content {
+    @include copy-19;
+  }
+}

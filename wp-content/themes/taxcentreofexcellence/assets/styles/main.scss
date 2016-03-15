@@ -2,7 +2,6 @@
 // bower:scss
 // endbower
 
-
 // govuk_frontend_toolkit
 @import "../../node_modules/govuk_frontend_toolkit/stylesheets/colours";
 @import "../../node_modules/govuk_frontend_toolkit/stylesheets/conditionals";
@@ -16,16 +15,22 @@
 @import "../../node_modules/govuk_frontend_toolkit/stylesheets/design-patterns/_buttons";
 
 // base rules
+@import "base/fonts";
 @import "base/variables";
 @import "base/basic";
 @import "base/accessibility";
+@import "base/headings";
 
 // layout rules
+@import "layout/page-container";
+@import "layout/grid";
 @import "layout/header";
 @import "layout/footer";
 
-
 // modules
+@import "modules/heading";
+@import "modules/section";
+
 
 // Other stuff
 /*@import "common/global";
