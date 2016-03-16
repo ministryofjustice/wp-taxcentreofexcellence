@@ -1,9 +1,17 @@
 .section {
   .section__heading {
     border-bottom: 2px solid $grey-1;
-    margin: 20px 0;
+    margin: 10px 0;
+
+    @include media(tablet) {
+      margin: 20px 0;
+    }
   }
+
   .section__content {
     @include copy-19;
+  }
+  .section__content--smaller {
+    @include copy-16;
   }
 }
