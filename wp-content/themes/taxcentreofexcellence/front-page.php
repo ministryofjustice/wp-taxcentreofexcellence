@@ -42,7 +42,42 @@
     <section class="section">
       <h2 class="section__heading">Contact us</h2>
       <div class="section__content">
-
+        <?php
+        $taxContacts = new WP_Query(array(
+          'post_type' => 'tax-contact',
+          'posts_per_page' => -1,
+        ));
+        ?>
+        <?php if ($taxContacts->have_posts()): ?>
+          <table>
+            <thead>
+              <th>Departments Covered</th>
+              <th>Contact Details</th>
+            </thead>
+            <tbody>
+              <?php while ($taxContacts->have_posts()): $taxContacts->the_post(); ?>
+                <tr>
+                  <td><?php the_field('departments'); ?></td>
+                  <td>
+                    <p>
+                      <?php if (get_field('email')): ?>
+                        <a href="mailto:<?php the_field('email'); ?>" class="link__email">
+                          <?php the_title(); ?>
+                        </a>
+                      <?php else: ?>
+                        <?php the_title(); ?>
+                      <?php endif; ?>
+                    </p>
+                    <?php if (get_field('telephone')): ?>
+                      <p>Telephone: <?php the_field('telephone'); ?></p>
+                    <?php endif; ?>
+                  </td>
+                </tr>
+              <?php endwhile; ?>
+            </tbody>
+          </table>
+        <?php endif; ?>
+        <?php wp_reset_postdata(); ?>
       </div>
     </section>
 
@@ -101,7 +136,7 @@
             <ul class="link-list">
               <?php foreach ($links as $link): ?>
                   <li>
-                    <a href="<?php echo $link['link']; ?>">
+                    <a href="<?php echo $link['link']; ?>" class="link__external" rel="external">
                       <?php echo $link['name']; ?>
                     </a>
                   </li>
