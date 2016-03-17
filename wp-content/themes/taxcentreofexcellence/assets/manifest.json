@@ -12,6 +12,16 @@
       ],
       "main": true
     },
+    "ie8.css": {
+      "files": [
+        "styles/ie8.scss"
+      ]
+    },
+    "ie7.css": {
+      "files": [
+        "styles/ie7.scss"
+      ]
+    },
     "editor.css": {
       "files": [
         "styles/editor.scss"
