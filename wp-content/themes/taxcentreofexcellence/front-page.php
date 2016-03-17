@@ -49,7 +49,7 @@
         ));
         ?>
         <?php if ($taxContacts->have_posts()): ?>
-          <table>
+          <table class="table table--striped">
             <thead>
               <th>Departments Covered</th>
               <th>Contact Details</th>
@@ -59,17 +59,16 @@
                 <tr>
                   <td><?php the_field('departments'); ?></td>
                   <td>
-                    <p>
-                      <?php if (get_field('email')): ?>
-                        <a href="mailto:<?php the_field('email'); ?>" class="link__email">
-                          <?php the_title(); ?>
-                        </a>
-                      <?php else: ?>
+                    <?php if (get_field('email')): ?>
+                      <a href="mailto:<?php the_field('email'); ?>" class="email-link">
                         <?php the_title(); ?>
-                      <?php endif; ?>
-                    </p>
+                      </a>
+                    <?php else: ?>
+                      <?php the_title(); ?>
+                    <?php endif; ?>
                     <?php if (get_field('telephone')): ?>
-                      <p>Telephone: <?php the_field('telephone'); ?></p>
+                      <br/>
+                      Telephone: <?php the_field('telephone'); ?>
                     <?php endif; ?>
                   </td>
                 </tr>
@@ -136,7 +135,7 @@
             <ul class="link-list">
               <?php foreach ($links as $link): ?>
                   <li>
-                    <a href="<?php echo $link['link']; ?>" class="link__external" rel="external">
+                    <a href="<?php echo $link['link']; ?>" rel="external">
                       <?php echo $link['name']; ?>
                     </a>
                   </li>

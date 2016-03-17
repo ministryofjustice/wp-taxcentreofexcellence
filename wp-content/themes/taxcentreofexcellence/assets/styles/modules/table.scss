@@ -1,0 +1,19 @@
+.table {
+  border-collapse: collapse;
+  margin: 0;
+  padding: 0;
+}
+
+.table--striped {
+  tr {
+    background-color: $grey-3;
+  }
+  tr:nth-child(2n),
+  thead tr {
+    background-color: transparent;
+  }
+  td, th {
+    text-align: left;
+    padding: 0.5em;
+  }
+}
