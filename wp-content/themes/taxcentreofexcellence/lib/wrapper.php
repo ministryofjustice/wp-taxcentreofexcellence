@@ -32,7 +32,7 @@ class SageWrapping {
 
   public function __construct($template = 'base.php') {
     $this->slug = basename($template, '.php');
-    $this->templates = [$template];
+    $this->templates = array($template);
 
     if (self::$base) {
       $str = substr($template, 0, -4);

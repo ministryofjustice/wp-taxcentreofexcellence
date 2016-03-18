@@ -8,7 +8,7 @@ $files = array_filter($files, function ($f) {
   return substr($f, 0, 1) !== '.';
 });
 
-$customPostTypes = [];
+$customPostTypes = array();
 
 foreach ($files as $file) {
   $cpt = require_once $path . $file;
