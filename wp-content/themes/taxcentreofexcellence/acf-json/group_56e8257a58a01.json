@@ -140,7 +140,7 @@
             "collapsed": "field_56e93795b618e",
             "min": "",
             "max": "",
-            "layout": "table",
+            "layout": "row",
             "button_label": "Add Row",
             "sub_fields": [
                 {
@@ -157,8 +157,9 @@
                         "id": ""
                     },
                     "choices": {
-                        "Link": "Link",
-                        "Heading": "Heading"
+                        "Attachment": "Attachment",
+                        "Heading": "Heading",
+                        "Link": "Link"
                     },
                     "default_value": [
                         "Link"
@@ -199,7 +200,15 @@
                     "type": "url",
                     "instructions": "",
                     "required": 0,
-                    "conditional_logic": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_56e9377cb618d",
+                                "operator": "==",
+                                "value": "Link"
+                            }
+                        ]
+                    ],
                     "wrapper": {
                         "width": "",
                         "class": "",
@@ -207,6 +216,33 @@
                     },
                     "default_value": "",
                     "placeholder": ""
+                },
+                {
+                    "key": "field_56ebf6473d90f",
+                    "label": "File",
+                    "name": "file",
+                    "type": "file",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_56e9377cb618d",
+                                "operator": "==",
+                                "value": "Attachment"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "return_format": "array",
+                    "library": "all",
+                    "min_size": "",
+                    "max_size": "",
+                    "mime_types": ""
                 }
             ]
         }
@@ -228,5 +264,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1458124765
+    "modified": 1458304061
 }

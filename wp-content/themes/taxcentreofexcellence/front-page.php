@@ -134,11 +134,15 @@
             <?php endif; ?>
             <ul class="link-list">
               <?php foreach ($links as $link): ?>
+                <?php if ($link['type'] == 'Link'): ?>
                   <li>
                     <a href="<?php echo $link['link']; ?>" rel="external">
                       <?php echo $link['name']; ?>
                     </a>
                   </li>
+                <?php elseif ($link['type'] == 'Attachment'): ?>
+                  <?php include(locate_template('templates/link-list-li-file.php')); ?>
+                <?php endif; ?>
               <?php endforeach; ?>
             </ul>
           <?php endforeach; ?>
