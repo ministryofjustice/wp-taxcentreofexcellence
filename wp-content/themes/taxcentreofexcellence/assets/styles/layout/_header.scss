@@ -23,9 +23,6 @@
         @extend %contain-floats;
         float: left;
 
-        @include media(desktop){
-          width: 33.33%;
-        }
         @media screen and (max-width: 379px) {
           width: auto;
           float: none;
@@ -76,8 +73,13 @@
 
     color: $white;
     font-weight: bold;
-    font-size: 30px;
-    line-height: 1em;
+    font-size: 20px;
+
+    @include media(tablet) {
+      font-size: 30px;
+    }
+
+    line-height: 30px;
     text-decoration: none;
     text-rendering: optimizeLegibility;
     margin-bottom: -3px;
