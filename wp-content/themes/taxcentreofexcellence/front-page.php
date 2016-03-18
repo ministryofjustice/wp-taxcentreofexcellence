@@ -22,16 +22,20 @@
           <div class="grid-row grid-row--narrow">
             <div class="column-one-half">
               <ul class="link-list">
-                <?php foreach ($taxGuidesFirstHalf as $link): ?>
-                  <?php include(locate_template('templates/link-list-li-file.php')); ?>
-                <?php endforeach; ?>
+                <?php
+                foreach ($taxGuidesFirstHalf as $link) {
+                  include(locate_template('templates/link-list-li.php'));
+                }
+                ?>
               </ul>
             </div>
             <div class="column-one-half">
               <ul class="link-list">
-                <?php foreach ($taxGuidesSecondHalf as $link): ?>
-                  <?php include(locate_template('templates/link-list-li-file.php')); ?>
-                <?php endforeach; ?>
+                <?php
+                foreach ($taxGuidesSecondHalf as $link) {
+                  include(locate_template('templates/link-list-li.php'));
+                }
+                ?>
               </ul>
             </div>
           </div>
@@ -91,9 +95,11 @@
         ?>
         <?php if (!empty($ourOfferings)): ?>
           <ul class="link-list">
-            <?php foreach ($ourOfferings as $link): ?>
-              <?php include(locate_template('templates/link-list-li-file.php')); ?>
-            <?php endforeach; ?>
+            <?php
+            foreach ($ourOfferings as $link) {
+              include(locate_template('templates/link-list-li.php'));
+            }
+            ?>
           </ul>
         <?php endif; ?>
       </div>
@@ -133,17 +139,11 @@
               <h4><?php echo $heading; ?></h4>
             <?php endif; ?>
             <ul class="link-list">
-              <?php foreach ($links as $link): ?>
-                <?php if ($link['type'] == 'Link'): ?>
-                  <li>
-                    <a href="<?php echo $link['link']; ?>" rel="external">
-                      <?php echo $link['name']; ?>
-                    </a>
-                  </li>
-                <?php elseif ($link['type'] == 'Attachment'): ?>
-                  <?php include(locate_template('templates/link-list-li-file.php')); ?>
-                <?php endif; ?>
-              <?php endforeach; ?>
+              <?php
+              foreach ($links as $link) {
+                include(locate_template('templates/link-list-li.php'));
+              }
+              ?>
             </ul>
           <?php endforeach; ?>
         <?php endif; ?>
