@@ -12,6 +12,21 @@
       ],
       "main": true
     },
+    "ie8.css": {
+      "files": [
+        "styles/ie8.scss"
+      ]
+    },
+    "ie7.css": {
+      "files": [
+        "styles/ie7.scss"
+      ]
+    },
+    "editor.css": {
+      "files": [
+        "styles/editor.scss"
+      ]
+    },
     "customizer.js": {
       "files": [
         "scripts/customizer.js"
@@ -22,6 +37,6 @@
     }
   },
   "config": {
-    "devUrl": "http://example.dev"
+    "devUrl": "http://taxcentreofexcellence.dev"
   }
 }
