@@ -55,8 +55,8 @@
         <?php if ($taxContacts->have_posts()): ?>
           <table class="table table--striped">
             <thead>
-              <th>Departments Covered</th>
-              <th>Contact Details</th>
+              <th>Departments</th>
+              <th>Contact details</th>
             </thead>
             <tbody>
               <?php while ($taxContacts->have_posts()): $taxContacts->the_post(); ?>
