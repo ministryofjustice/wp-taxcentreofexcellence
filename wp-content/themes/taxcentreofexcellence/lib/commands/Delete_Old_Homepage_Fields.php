@@ -13,6 +13,9 @@ class Delete_Old_Homepage_Fields extends WP_CLI_Command {
   public function __invoke() {
     global $wpdb;
 
+    WP_CLI::warning('Post meta fields will be deleted! Make sure you\'ve migrated fields first.');
+    WP_CLI::confirm('Do you want to continue?');
+
     $fields = array(
       'tax_guides',
       'our_offerings',

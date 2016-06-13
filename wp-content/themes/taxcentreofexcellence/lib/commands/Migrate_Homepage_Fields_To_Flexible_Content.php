@@ -83,6 +83,9 @@ class Migrate_Homepage_Fields_To_Flexible_Content extends WP_CLI_Command {
     foreach ($link_lists as $link_list) {
       $this->add_link_list($this->sidebar_content, $link_list['header'], $link_list['links']);
     }
+
+    // Done
+    WP_CLI::success('Fields have been migrated.');
   }
 
   /**
