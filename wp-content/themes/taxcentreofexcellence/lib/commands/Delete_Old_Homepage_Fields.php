@@ -9,12 +9,20 @@ class Delete_Old_Homepage_Fields extends WP_CLI_Command {
 
   /**
    * Delete old homepage ACF fields.
+   *
+   * ## OPTIONS
+   *
+   * [--yes]
+   * : Confirm deletion.
    */
-  public function __invoke() {
+  public function __invoke($args, $assoc_args) {
     global $wpdb;
 
-    WP_CLI::warning('Post meta fields will be deleted! Make sure you\'ve migrated fields first.');
-    WP_CLI::confirm('Do you want to continue?');
+    if (!isset($assoc_args['yes'])) {
+      WP_CLI::warning('Post meta fields will be deleted! Make sure you\'ve migrated fields first.');
+      WP_CLI::log('To continue, run this command again with --yes flag.');
+      return;
+    }
 
     $fields = array(
       'tax_guides',
