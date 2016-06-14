@@ -11,6 +11,7 @@
  */
 $sage_includes = array(
   'lib/assets.php',             // Scripts and stylesheets
+  'lib/commands.php',           // WP-CLI commands
   'lib/custom-post-types.php',  // Register custom post types
   'lib/extras.php',             // Custom functions
   'lib/setup.php',              // Theme setup
