@@ -10,8 +10,7 @@ if (!class_exists('\WP_CLI')) {
 use WP_CLI;
 
 $commands = array(
-  'Migrate_Homepage_Fields_To_Flexible_Content',
-  'Delete_Old_Homepage_Fields',
+  // 'Example_Command',
 );
 
 /**
