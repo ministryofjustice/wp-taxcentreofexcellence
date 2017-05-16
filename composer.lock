@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "f79b4139b4576c266dfb93c15f270f84",
+    "content-hash": "a33bdfaca36d003c602f98610ba41054",
     "packages": [
         {
             "name": "acf/advanced-custom-fields-pro",
@@ -313,6 +313,37 @@
             "time": "2017-01-11T19:10:05+00:00"
         },
         {
+            "name": "ministryofjustice/wp-rewrite-media-to-s3",
+            "version": "0.1.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/ministryofjustice/wp-rewrite-media-to-s3.git",
+                "reference": "8c9c6fee624787ccc14ecd22ddfc5e73f456be81"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://composer.wp.dsd.io/dist/ministryofjustice-wp-rewrite-media-to-s3-8c9c6fee624787ccc14ecd22ddfc5e73f456be81-zip-c4ed0a.zip",
+                "reference": "8c9c6fee624787ccc14ecd22ddfc5e73f456be81",
+                "shasum": "123d0f93152e0e909697fe4735e378f434a20f42"
+            },
+            "require": {
+                "composer/installers": "^1.0"
+            },
+            "type": "wordpress-plugin",
+            "authors": [
+                {
+                    "name": "Ollie Treend",
+                    "email": "ollie.treend@digital.justice.gov.uk"
+                }
+            ],
+            "description": "A WordPress plugin which rewrites media attachment URLs to S3.",
+            "support": {
+                "source": "https://github.com/ministryofjustice/wp-rewrite-media-to-s3/tree/0.1.1",
+                "issues": "https://github.com/ministryofjustice/wp-rewrite-media-to-s3/issues"
+            },
+            "time": "2017-03-06T17:20:15+00:00"
+        },
+        {
             "name": "oscarotero/env",
             "version": "v1.0.2",
             "source": {
@@ -492,7 +523,7 @@
             "dist": {
                 "type": "zip",
                 "url": "https://downloads.wordpress.org/plugin/intuitive-custom-post-order.3.0.8.zip",
-                "reference": null,
+                "reference": "tags/3.0.8",
                 "shasum": null
             },
             "require": {

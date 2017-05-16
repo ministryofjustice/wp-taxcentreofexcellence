@@ -50,7 +50,8 @@
     "roots/wp-password-bcrypt": "1.0.0",
     "acf/advanced-custom-fields-pro": "^5",
     "wpackagist-plugin/google-analytics-dashboard-for-wp": "4.9.6.2",
-    "wpackagist-plugin/intuitive-custom-post-order": "^3.0"
+    "wpackagist-plugin/intuitive-custom-post-order": "^3.0",
+    "ministryofjustice/wp-rewrite-media-to-s3": "^0.1.1"
   },
   "require-dev": {
     "squizlabs/php_codesniffer": "^2.5.1"
