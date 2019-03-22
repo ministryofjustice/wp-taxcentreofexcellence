@@ -1,11 +1,21 @@
+# Editors
+.idea/
+
 # Application
+web/app/debug.log
 web/app/plugins/*
 !web/app/plugins/.gitkeep
 web/app/mu-plugins/*/
+!web/app/mu-plugins/load.php
+!web/app/mu-plugins/jacintranet/
 web/app/upgrade
 web/app/languages
 web/app/uploads/*
 !web/app/uploads/.gitkeep
+
+web/app/themes/jacintranet/meta/
+web/app/themes/jacintranet/node_modules/
+web/app/themes/jacintranet/dist/
 
 # WordPress
 web/wp
@@ -19,3 +29,6 @@ web/.htaccess
 # Composer
 vendor/*
 !vendor/.gitkeep
+
+# DB
+*.sql
