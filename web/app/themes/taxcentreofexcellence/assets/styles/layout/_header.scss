@@ -86,9 +86,7 @@
     padding-top: 2px;
     border-bottom: 1px solid transparent;
 
-    background: url('../images/gov.uk_logotype_crown.png') no-repeat;
-    background-size: 35px 31px;
-    background-position: 0 0;
+    background: url('../images/gov.uk_logotype_crown.png') 0 0 / 35px 31px no-repeat;
     @include ie-lte(8) {
       background-image: url('../images/gov.uk_logotype_crown-1x.png');
     }
@@ -116,6 +114,44 @@
       border-bottom-color: $white;
     }
   }
+
+  .header-search {
+    .govuk-button, .govuk-input {
+      @include media(desktop){
+        font-size: 1.9rem;
+        margin-bottom: 0;
+      }
+    }
+    .govuk-button {
+      padding-top: 7px;
+      padding-bottom: 4px;
+    }
+    .govuk-input {
+      width:70%;
+      height: auto;
+      border: 2px solid transparent;
+      @include media(tablet){
+        width:66%;
+      }
+      @include media(desktop){
+        width:70%;
+        margin-bottom: 0;
+      }
+    }
+    .search-form {
+      margin: 0 14px;
+    }
+    > div {
+      float:right;
+      @include media(mobile) {
+        width:100%;
+        text-align: center;
+        margin-top: 24px;
+        float: none;
+      }
+    }
+  }
+
   .header-proposition {
     padding-top: 10px;
     @include media(desktop){

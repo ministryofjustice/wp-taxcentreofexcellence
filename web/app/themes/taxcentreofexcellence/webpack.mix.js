@@ -9,6 +9,7 @@ mix.js('assets/scripts/main.js', 'scripts/main.js')
   })
   .sass('assets/styles/editor.scss', 'styles/editor.css')
   .copy('assets/fonts/*', 'dist/fonts/')
+  .copy('./node_modules/govuk-frontend/govuk/assets/fonts/*', 'assets/fonts/')
   .copy('assets/images/*.{jpg,jpeg,png,gif,svg,ico}', 'dist/images/')
   .copy('assets/images/external-links/*.{jpg,jpeg,png,gif,svg,ico}', 'dist/images/external-links/');
 

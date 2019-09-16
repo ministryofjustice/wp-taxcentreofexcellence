@@ -17,7 +17,9 @@
           <h1 class="heading--inline"><?php bloginfo('name'); ?></h1>
         </a>
       </div>
-
+      <div class="header-search">
+        <div style="float:right;"> <?= get_search_form() ?></div>
+      </div>
     </div>
 
   </div>

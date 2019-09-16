@@ -12,7 +12,9 @@
 @import "../../node_modules/govuk_frontend_toolkit/stylesheets/measurements";
 @import "../../node_modules/govuk_frontend_toolkit/stylesheets/shims";
 @import "../../node_modules/govuk_frontend_toolkit/stylesheets/typography";
-@import "../../node_modules/govuk_frontend_toolkit/stylesheets/design-patterns/_buttons";
+/*
+@import "../../node_modules/govuk-frontend/govuk/components/button/button";
+@import "../../node_modules/govuk-frontend/govuk/components/input/input";*/
 
 // base rules
 @import "base/fonts";
@@ -20,6 +22,7 @@
 @import "base/basic";
 @import "base/accessibility";
 @import "base/headings";
+@import "base/patch";
 
 // layout rules
 @import "layout/page-container";
@@ -35,6 +38,8 @@
 @import "modules/email-link";
 @import "modules/table";
 @import "modules/report-problem-link";
+
+
 
 
 // Other stuff

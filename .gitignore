@@ -1,5 +1,6 @@
 # Editors
 .idea/
+.DS_*
 
 # Application
 web/app/debug.log
