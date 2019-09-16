@@ -20,21 +20,19 @@
   "dependencies": {
     "debounce": "^1.2.0",
     "details-element-polyfill": "^2.4.0",
-    "govuk-frontend": "^3.2.0",
     "govuk_frontend_toolkit": "^9.0.0",
-    "jquery": "^3.4.0",
+    "jquery": "^3.4.1",
     "scrollpoints": "^0.4.0"
   },
   "devDependencies": {
-    "acorn": "^6.3.0",
-    "ajv": "^6.10.0",
+    "acorn": "^7.0.0",
+    "ajv": "^6.10.2",
     "browser-sync": "^2.26.7",
-    "browser-sync-webpack-plugin": "^2.0.1",
+    "browser-sync-webpack-plugin": "^2.2.2",
     "cross-env": "^5.2.1",
     "laravel-mix": "^4.1.4",
     "node-sass": "^4.12.0",
-    "resolve-url-loader": "^2.3.1",
-    "sass": "^1.22.12",
+    "resolve-url-loader": "^3.1.0",
     "sass-loader": "^7.3.1",
     "url-search-params-polyfill": "^4.0.0",
     "vue-template-compiler": "^2.5.16"
