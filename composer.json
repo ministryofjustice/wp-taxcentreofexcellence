@@ -55,6 +55,7 @@
     "wpackagist-plugin/classic-editor": "*",
     "wpackagist-plugin/fast-user-switching": "*",
     "ministryofjustice/wp-user-roles": "*",
+    "ministryofjustice/cookie-compliance-for-wordpress": "*",
     "ministryofjustice/wp-moj-components": "*",
     "relevanssi/relevanssi-premium": "*"
   },
