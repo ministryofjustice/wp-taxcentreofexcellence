@@ -51,4 +51,4 @@ function assets() {
   wp_enqueue_script('sage/html5', 'https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js', array(), null);
   wp_script_add_data('sage/html5', 'conditional', 'lte IE 8');
 }
-add_action('wp_enqueue_scripts', __NAMESPACE__ . '\\assets', 100);
+add_action('wp_enqueue_scripts', __NAMESPACE__ . '\\assets', 10);
