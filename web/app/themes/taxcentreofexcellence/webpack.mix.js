@@ -4,6 +4,8 @@ mix.setPublicPath('./dist/');
 
 mix.js('assets/scripts/main.js', 'scripts/main.js')
   .sass('assets/styles/main.scss', 'styles/main.css')
+  .sass('assets/styles/ie7.scss', 'styles/ie7.css')
+  .sass('assets/styles/ie8.scss', 'styles/ie8.css')
   .options({
     processCssUrls: false
   })
