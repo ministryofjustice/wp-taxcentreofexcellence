@@ -30,11 +30,21 @@ function setup() {
 }
 add_action('after_setup_theme', __NAMESPACE__ . '\\setup');
 
+function mix_asset($filename) {
+  $filename = '/' . $filename;
+  $manifest_path = dirname(__FILE__) . '/../dist/mix-manifest.json';
+  $manifest = json_decode(file_get_contents($manifest_path), true);
+  if (!isset($manifest[$filename])) {
+    error_log("Mix asset '$filename' does not exist in manifest.");
+  }
+  return get_stylesheet_directory_uri() . '/dist' . $manifest[$filename];
+}
+
 /**
  * Theme assets
  */
 function assets() {
-  wp_enqueue_style('sage/css', Assets\asset_path('styles/main.css'), false, null);
+  wp_enqueue_style('sage/css', mix_asset('styles/main.css'), false, null);
 
   wp_enqueue_style('sage/ie8', Assets\asset_path('styles/ie8.css'), false, null);
   wp_style_add_data('sage/ie8', 'conditional', 'IE 8');
