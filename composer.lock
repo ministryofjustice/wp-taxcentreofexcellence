@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "38c5a68bba4d2446b3b2440c45e57896",
+    "content-hash": "b681f84974adc5351cbf642c66dc6cb0",
     "packages": [
         {
             "name": "acf/advanced-custom-fields-pro",
@@ -12,6 +12,7 @@
             "dist": {
                 "type": "zip",
                 "url": "https://composer.wp.dsd.io/dist/acf/advanced-custom-fields-pro/acf-advanced-custom-fields-pro-5.8.1.zip",
+                "reference": null,
                 "shasum": "1ba6174e31db0d3c2728d7bd5258c621d8eb9391"
             },
             "type": "wordpress-plugin"
@@ -253,10 +254,12 @@
         },
         {
             "name": "koodimonni-language/core-en_gb",
-            "version": "5.2.3",
+            "version": "5.2.4",
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/translation/core/5.2.3/en_GB.zip"
+                "url": "https://downloads.wordpress.org/translation/core/5.2.4/en_GB.zip",
+                "reference": null,
+                "shasum": null
             },
             "require": {
                 "koodimonni/composer-dropin-installer": ">=0.2.3"
@@ -357,22 +360,43 @@
         },
         {
             "name": "ministryofjustice/wp-moj-components",
-            "version": "2.0.0",
+            "version": "3.0.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/ministryofjustice/wp-moj-components.git",
-                "reference": "03588073d9e5cc1b2593c4cdced71595fbb6cce5"
+                "reference": "e761d303414e29983c9e0317d94eeb67b6bd03e9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://composer.wp.dsd.io/dist/ministryofjustice/wp-moj-components/ministryofjustice-wp-moj-components-03588073d9e5cc1b2593c4cdced71595fbb6cce5-zip-11175a.zip",
-                "reference": "03588073d9e5cc1b2593c4cdced71595fbb6cce5",
-                "shasum": "d9ef650c0fb485c0cd3182bd715624de142732a7"
+                "url": "https://composer.wp.dsd.io/dist/ministryofjustice/wp-moj-components/ministryofjustice-wp-moj-components-e761d303414e29983c9e0317d94eeb67b6bd03e9-zip-ff939d.zip",
+                "reference": "e761d303414e29983c9e0317d94eeb67b6bd03e9",
+                "shasum": "b1d9c72c1dce889d30a87572b36fc0496e40f13d"
             },
             "require": {
                 "composer/installers": "^1.0"
             },
+            "require-dev": {
+                "10up/wp_mock": "0.4.2",
+                "phpmd/phpmd": "^2.7",
+                "squizlabs/php_codesniffer": "^3.5"
+            },
             "type": "wordpress-muplugin",
+            "autoload": {
+                "psr-4": {
+                    "component\\Introduce\\": "component/Introduce/",
+                    "component\\Security\\": "component/Security/"
+                }
+            },
+            "scripts": {
+                "test": [
+                    "vendor/bin/phpunit",
+                    "vendor/bin/phpcs -p",
+                    "vendor/bin/phpmd component/ text cleancode,codesize,controversial,design,naming,unusedcode"
+                ],
+                "coverage": [
+                    "vendor/bin/phpunit --coverage-html coverage --whitelist component"
+                ]
+            },
             "authors": [
                 {
                     "name": "Damien Wilson",
@@ -381,10 +405,10 @@
             ],
             "description": "A plugin to introduce global functions to a collection of WP sites",
             "support": {
-                "source": "https://github.com/ministryofjustice/wp-moj-components/tree/2.0.0",
+                "source": "https://github.com/ministryofjustice/wp-moj-components/tree/3.0.1",
                 "issues": "https://github.com/ministryofjustice/wp-moj-components/issues"
             },
-            "time": "2019-09-25T12:44:25+00:00"
+            "time": "2019-11-12T23:26:43+00:00"
         },
         {
             "name": "ministryofjustice/wp-rewrite-media-to-s3",
@@ -501,11 +525,12 @@
         },
         {
             "name": "relevanssi/relevanssi-premium",
-            "version": "2.4.0",
+            "version": "2.4.4",
             "dist": {
                 "type": "zip",
-                "url": "https://composer.wp.dsd.io/dist/relevanssi/relevanssi-premium/relevanssi-relevanssi-premium-2.4.0.zip",
-                "shasum": "b53a54d7adbce0e2692a28641a229349074b40b7"
+                "url": "https://composer.wp.dsd.io/dist/relevanssi/relevanssi-premium/relevanssi-relevanssi-premium-2.4.4.zip",
+                "reference": null,
+                "shasum": "ee7986d36d9bbbb5b81acc886d6686527dd1d2d9"
             },
             "type": "wordpress-plugin"
         },
@@ -685,7 +710,9 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/classic-editor.1.5.zip"
+                "url": "https://downloads.wordpress.org/plugin/classic-editor.1.5.zip",
+                "reference": null,
+                "shasum": null
             },
             "require": {
                 "composer/installers": "~1.0"
@@ -703,7 +730,9 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/fast-user-switching.zip?timestamp=1551360022"
+                "url": "https://downloads.wordpress.org/plugin/fast-user-switching.zip?timestamp=1551360022",
+                "reference": null,
+                "shasum": null
             },
             "require": {
                 "composer/installers": "~1.0"
@@ -721,7 +750,9 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/google-analytics-dashboard-for-wp.5.3.9.zip"
+                "url": "https://downloads.wordpress.org/plugin/google-analytics-dashboard-for-wp.5.3.9.zip",
+                "reference": null,
+                "shasum": null
             },
             "require": {
                 "composer/installers": "~1.0"
@@ -739,7 +770,9 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/intuitive-custom-post-order.3.1.2.zip"
+                "url": "https://downloads.wordpress.org/plugin/intuitive-custom-post-order.3.1.2.zip",
+                "reference": null,
+                "shasum": null
             },
             "require": {
                 "composer/installers": "~1.0"
