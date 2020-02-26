@@ -3,6 +3,7 @@
 .DS_*
 
 # Application
+web/.well-known/security.txt
 web/app/debug.log
 web/app/plugins/*
 !web/app/plugins/.gitkeep
@@ -33,3 +34,4 @@ vendor/*
 
 # DB
 *.sql
+bin/local-db-import.sh
