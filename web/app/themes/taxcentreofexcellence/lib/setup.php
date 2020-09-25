@@ -37,6 +37,11 @@ function setup() {
   // Use main stylesheet for visual editor
   // To add custom styles edit /assets/styles/layouts/_tinymce.scss
   add_editor_style(mix_asset('styles/editor.css'));
+
+  register_nav_menus(array(
+    'footer-menu' => esc_html__('Footer Menu', 'sage')
+  ));
+
 }
 add_action('after_setup_theme', __NAMESPACE__ . '\\setup');
 
