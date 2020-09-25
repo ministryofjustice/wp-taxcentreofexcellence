@@ -33,6 +33,23 @@
     }
   }
 
+  .footer-menu-container {
+    ul {
+      list-style: none;
+      padding: 0;
+
+      li {
+        margin-bottom:  1em;
+      }
+
+      a {
+        @include media(tablet) {
+          font-size: 19px;
+        }
+      }
+    }
+  }
+
   .footer-meta {
     @extend %contain-floats;
     padding-bottom: 60px;
